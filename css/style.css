@@ -463,6 +463,9 @@ a { color: inherit; text-decoration: none; }
   transition: transform .4s ease, opacity .4s ease;
 }
 .gallery img:hover { transform: translateY(-4px); opacity: 0.92; }
+/* Foto horizontal: ocupa dos columnas y se ve entera (sin recortar los lados) */
+.gallery img.wide { grid-column: span 2; aspect-ratio: 3/2; }
+.gallery img { align-self: stretch; }
 
 @media (max-width: 760px) {
   .gallery { grid-template-columns: repeat(2, 1fr); }
